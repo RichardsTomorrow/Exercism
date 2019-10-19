@@ -7,7 +7,10 @@ public static class Isogram
     public static bool IsIsogram(string word)
     {
         word = word.ToLower();
-        char[] wordChar = word.ToCharArray().Where(Char.IsLetter);
+        word = word.Replace(" ", "");
+        word = word.Replace("-", "");
+        char[] wordChar = word.ToCharArray(); //.Where(Char.IsLetter);
+        
 
         Array.Sort(wordChar);
 
