@@ -5,6 +5,26 @@ public static class PythagoreanTriplet
 {
     public static IEnumerable<(int a, int b, int c)> TripletsWithSum(int sum)
     {
-        throw new NotImplementedException("You need to implement this function.");
+        //int m = 0; // m > n
+        //int n = 0;
+
+        for (int a = 1; a < sum; a++)
+        {
+            for (int b = a + 1; b < sum; b++)
+            {
+                int c = sum - a - b;
+                
+                if (b >= c || a >= c)
+                {
+                    break;
+                }
+                else if (a*a + b*b == c * c)
+                {
+                    yield return (a, b, c);
+                }
+            }
+        }
+
+        
     }
 }
