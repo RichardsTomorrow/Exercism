@@ -15,10 +15,10 @@ public static class AllYourBase
         int s = 0;
         List<int> answer = new List<int>();
 
-        int numberOfDigitsTo10 = inputDigits.Length - 1;
+        int exp = inputDigits.Length - 1;
         for (int i = 0; i < inputDigits.Length; i++)
         {
-            s += inputDigits[i] * (int)Math.Pow(inputBase, numberOfDigitsTo10--);
+            s += inputDigits[i] * (int)Math.Pow(inputBase, exp--);
         }
         while (s > 0)
         {
@@ -26,8 +26,7 @@ public static class AllYourBase
             s /= outputBase;
         }
 
-        answer.Reverse();
-        if (inputDigits.Sum() == 0) answer.Add(0);
-        return answer.ToArray();
+        if (inputDigits.Sum() == 0) answer.Add(0);// this is neeed if the number being converted is zero
+        return answer.ToArray().Reverse().ToArray();//this sandwich is needed since 
     }
 }
