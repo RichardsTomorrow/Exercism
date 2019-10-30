@@ -18,8 +18,7 @@ public static class AllYourBase
         int numberOfDigitsTo10 = inputDigits.Length - 1;
         for (int i = 0; i < inputDigits.Length; i++)
         {
-            s += inputDigits[i] * (int)Math.Pow(inputBase, numberOfDigitsTo10);
-            numberOfDigitsTo10--;
+            s += inputDigits[i] * (int)Math.Pow(inputBase, numberOfDigitsTo10--);
         }
         while (s > 0)
         {
