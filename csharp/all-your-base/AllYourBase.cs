@@ -27,6 +27,6 @@ public static class AllYourBase
         }
 
         if (inputDigits.Sum() == 0) answer.Add(0);// this is neeed if the number being converted is zero
-        return answer.ToArray().Reverse().ToArray();//this sandwich is needed since 
+        return answer.ToArray().Reverse().ToArray();//this sandwich is needed 
     }
 }
