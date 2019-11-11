@@ -3,6 +3,11 @@
 // convenience to get you started writing code faster.
 //
 
-export const twoFer = () => {
-  throw new Error("Remove this statement and implement this function");
+export const twoFer = (input) => {
+  let name = "you";
+if(input !== undefined){
+  name = input;
+}
+
+  return `One for ${name}, one for me.`;
 };
