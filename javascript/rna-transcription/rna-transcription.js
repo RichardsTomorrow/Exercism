@@ -5,7 +5,7 @@
 
 export const toRna = (dna) => {
   let answer = '';
-  var rnaDict ={
+  const rnaDict ={
     A:'U',
     T:'A',
     G:'C',
