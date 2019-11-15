@@ -11,6 +11,5 @@ export const toRna = (dna) => {
     G:'C',
     C:'G'
   };
-let rna = dna.split('');
-return rna.map(nucleotide => rnaDict[nucleotide]).join('');
+return dna.split('').map(nucleotide => rnaDict[nucleotide]).join('');
 };
