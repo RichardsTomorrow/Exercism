@@ -7,8 +7,8 @@ export const transform = (oldSystem) => {
 
   let newSystem = {};
   Object.keys(oldSystem).map(value => {
-    oldSystem[value].forEach(item => {
-      newSystem[item.toLowerCase()] = Number(value)
+    oldSystem[value].forEach(letter => {
+      newSystem[letter.toLowerCase()] = Number(value)
     })
   })
   return newSystem;
