@@ -8,7 +8,6 @@ export const hey = (message) => {
   const question = message.trim().endsWith("?");
   const yell = isUpperCase(message);
   const empty = isNullOrEmpty(message);
-  let answer = 'Whatever.';
 
   function isUpperCase(str) {
     return str == str.toUpperCase() && str != str.toLowerCase(); // some chars will return true if checked against either lower or upper, this checks against case-less chars
@@ -16,10 +15,9 @@ export const hey = (message) => {
   function isNullOrEmpty(str){
     return !str||!str.trim();
   }
-  if(empty){answer = 'Fine. Be that way!';}
-  else if (question && yell){answer = 'Calm down, I know what I\'m doing!';}
-  else if (question){answer = 'Sure.';}
-  else if (yell){answer = 'Whoa, chill out!';}
-  
-  return answer;
+  if(empty){return 'Fine. Be that way!';}
+  else if (question && yell){return 'Calm down, I know what I\'m doing!';}
+  else if (question){return'Sure.';}
+  else if (yell){return 'Whoa, chill out!';}
+  else {return 'Whatever.'}
 };
