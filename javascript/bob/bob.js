@@ -16,8 +16,7 @@ export const hey = (message) => {
     return !str||!str.trim();
   }
   if(empty){return 'Fine. Be that way!';}
-  else if (question && yell){return 'Calm down, I know what I\'m doing!';}
-  else if (question){return'Sure.';}
+  else if (question){return yell ? 'Calm down, I know what I\'m doing!': 'Sure.';}
   else if (yell){return 'Whoa, chill out!';}
   else {return 'Whatever.'}
 };
