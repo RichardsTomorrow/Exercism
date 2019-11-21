@@ -22,9 +22,7 @@ export class GradeSchool {
   }
 
   grade(grade) {
-    if(this._roster.hasOwnProperty(grade)){
-      return [...this._roster[grade]];
-    } else {return [];}
+    return this._roster.hasOwnProperty(grade) ? [...this._roster[grade]] : [];
   }
 }
 
