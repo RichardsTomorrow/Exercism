@@ -4,21 +4,21 @@
 //
 
 export class Triangle {
-  constructor(side1, side2, side3) {
-    this.side1 = side1;
-    this.side2 = side2;
-    this.side3 = side3;
+  constructor(x, y, z) {
+    this.x = x;
+    this.y = y;
+    this.z = z;
   }
 
   kind() {
-    if(this.side1 === 0 || this.side2 === 0 || this.side3 === 0){throw "A triangle's sides must have a length greater than 0.";}
-    else if (this.side1 < 0 || this.side2 < 0 || this.side3 < 0){throw "A triangle's side can't be negative.";}
-    else if(!(this.side1 + this.side2 > this.side3) ||!(this.side2 + this.side3 > this.side1) ||!(this.side3 + this.side1 > this.side2) ){
+    if(this.x === 0 || this.y === 0 || this.z === 0){throw "A triangle's sides must have a length greater than 0.";}
+    else if (this.x < 0 || this.y < 0 || this.z < 0){throw "A triangle's side can't be negative.";}
+    else if(!(this.x + this.y > this.z) ||!(this.y + this.z > this.x) ||!(this.z + this.x > this.y) ){
       throw "This triangle violates triangle equality.";}
-    else if((this.side1 + this.side2 === this.side3) ||(this.side2 + this.side3 === this.side1) ||(this.side3 + this.side1 === this.side2) ){
+    else if((this.x + this.y === this.z) ||(this.y + this.z === this.x) ||(this.z + this.x === this.y) ){
       throw "This triangle is a degenerate.";}
-    else if (this.side1 === this.side2 && this.side2 === this.side3){return 'equilateral';}
-    else if (this.side1 === this.side2 || this.side1 === this.side3 || this.side2 === this.side3){return 'isosceles';}
+    else if (this.x === this.y && this.y === this.z){return 'equilateral';}
+    else if (this.x === this.y || this.x === this.z || this.y === this.z){return 'isosceles';}
     else{return 'scalene';}
   }
 }
