@@ -4,6 +4,5 @@
 //
 
 export const twoFer = (input = "you") => {
-  name = input;
-  return `One for ${name}, one for me.`;
+  return `One for ${input}, one for me.`;
 };
