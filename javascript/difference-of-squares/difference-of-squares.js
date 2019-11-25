@@ -25,7 +25,6 @@ export class Squares {
   }
 
   get difference() {
-    let answer = this.squareOfSum - this.sumOfSquares
-    return answer;
+    return  this.squareOfSum - this.sumOfSquares;
   }
 }
