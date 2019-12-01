@@ -17,8 +17,7 @@ export class HighScores {
   }
 
   get personalBest() {
-    const tops = this._scores.sort(function(a, b){return b - a});
-    return tops[0];
+    return Math.max(...this._scores)
   }
 
   get personalTopThree() {
